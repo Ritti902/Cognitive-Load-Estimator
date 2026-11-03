@@ -1,0 +1,98 @@
+{
+  "database": "C:\\Users\\ritik\\OneDrive\\Desktop\\Cognitive-Load_Estimator\\Cognitive-Load-Estimator--main\\dataset\\cognitive_load.db",
+  "dataset_csv": "C:\\Users\\ritik\\OneDrive\\Desktop\\Cognitive-Load_Estimator\\Cognitive-Load-Estimator--main\\dataset\\training_dataset.csv",
+  "total_sessions": 4,
+  "raw_signal_rows": {
+    "cv_signals": 1558,
+    "behaviour_signals": 724,
+    "quiz_responses": 5
+  },
+  "prediction_rows_ignored": 2264,
+  "assessment_status_counts": {
+    "unverified": 3,
+    "missing": 1
+  },
+  "label_source_counts": {
+    "missing": 4
+  },
+  "sessions_with_verified_nasa_tlx": 0,
+  "usable_sessions": 0,
+  "usable_rows": 0,
+  "excluded_sessions": [
+    {
+      "session_id": "session_8502a4d7",
+      "reason": "Stored score or label has no verified assessment submission"
+    },
+    {
+      "session_id": "session_bc9ac7df",
+      "reason": "Stored score or label has no verified assessment submission"
+    },
+    {
+      "session_id": "session_d0ec0ff141934d508f980c21d30ce8cc",
+      "reason": "NASA-TLX assessment is missing"
+    },
+    {
+      "session_id": "test_session_001",
+      "reason": "Stored score or label has no verified assessment submission"
+    }
+  ],
+  "dropped_signal_rows": {},
+  "missing_or_invalid_value_counts": {
+    "cv_signals.gaze_score": 854,
+    "quiz_responses.confidence": 2,
+    "cv_signals.expression": 0,
+    "cv_signals.gaze": 0
+  },
+  "missing_or_invalid_values": {
+    "gaze_score": "NULL in historical CV rows when the old collector did not persist it; such rows are excluded.",
+    "expression": "Unknown or missing labels are excluded from session expression means.",
+    "behaviour": "Must be finite and normalized to 0-1.",
+    "quiz": "Response time must be nonnegative, confidence 1-5, correctness 0 or 1."
+  },
+  "class_distribution": {
+    "LOW": 0,
+    "MEDIUM": 0,
+    "OVERLOADED": 0
+  },
+  "participants_per_class": {
+    "LOW": 0,
+    "MEDIUM": 0,
+    "OVERLOADED": 0
+  },
+  "feature_columns": [
+    "blink_rate",
+    "gaze_score",
+    "expression",
+    "wpm",
+    "backspace_rate",
+    "scroll_reversals",
+    "mouse_idle",
+    "response_time",
+    "confidence",
+    "f10",
+    "f11"
+  ],
+  "feature_dtypes": {
+    "blink_rate": "float64",
+    "gaze_score": "float64",
+    "expression": "float64",
+    "wpm": "float64",
+    "backspace_rate": "float64",
+    "scroll_reversals": "float64",
+    "mouse_idle": "float64",
+    "response_time": "float64",
+    "confidence": "float64",
+    "f10": "float64",
+    "f11": "float64"
+  },
+  "trace_columns": [
+    "session_id",
+    "student_id",
+    "assessment_status",
+    "label_source",
+    "nasa_tlx_score"
+  ],
+  "f10_f11": "Reserved model-compatibility inputs, fixed to zero; no meaning is imputed.",
+  "sufficient_for_meaningful_three_class_evaluation": false,
+  "evaluation_note": "Meaningful held-out evaluation requires at least 10 distinct participants per class; no class is balanced with fabricated data."
+}
